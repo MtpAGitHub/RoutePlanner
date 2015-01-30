@@ -1,0 +1,11 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label x:Name="lblMainTitle" Content="Route Planner" HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="btnLoader" Content="Load Stations" HorizontalAlignment="Left" Margin="101,182,0,0" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="btnMapBuild" Content="Create Map" HorizontalAlignment="Left" Margin="334,182,0,0" VerticalAlignment="Top" Width="86"/>
+
+    </Grid>
+</Window>
