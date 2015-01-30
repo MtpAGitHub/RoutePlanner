@@ -66,8 +66,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Enums\FileType.vb" />
     <Compile Include="Interfaces\IFileLoader.vb" />
+    <Compile Include="Interfaces\IStationListBuilder.vb" />
+    <Compile Include="Model\Station.vb" />
+    <Compile Include="Model\TXTStationBuilder.vb" />
+    <Compile Include="Utils\CSVFileLoader.vb" />
+    <Compile Include="Utils\FileExtension.vb" />
     <Compile Include="Utils\FileLoader.vb" />
     <Compile Include="Utils\FileTypeFactory.vb" />
     <Compile Include="Utils\TxtFileLoader.vb" />
@@ -143,7 +147,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

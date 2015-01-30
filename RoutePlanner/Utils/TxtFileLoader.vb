@@ -11,9 +11,12 @@ Public Class TxtFileLoader
     Public Function loadDataFile(fileName As String) As String Implements IFileLoader.loadDataFile
         Dim txtStreamReader = New StreamReader(fileName)
         Dim fileData = New StringBuilder()
-        fileData.Append(txtStreamReader.ReadLine)
-        Do While Not fileData Is Nothing
-            fileData.Append(txtStreamReader.ReadLine)
+        Dim curLine As String
+        curLine = txtStreamReader.ReadLine
+        Do While Not curLine Is Nothing
+            fileData.Append(curLine)
+            fileData.Append(vbCr)
+            curLine = txtStreamReader.ReadLine
         Loop
         txtStreamReader.Close()
         Return fileData.ToString

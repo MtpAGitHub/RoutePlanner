@@ -3,13 +3,13 @@
     Public Sub New()
     End Sub
 
-    Public Function getInstance(ByVal fileType As String) As IFileLoader
+    Public Shared Function getInstance(ByVal fileType As String) As IFileLoader
         Dim loaderClass As IFileLoader
         Select Case FileType
             Case ".txt"
                 loaderClass = New TxtFileLoader()
             Case ".csv"
-                loaderClass = Nothing
+                loaderClass = New CSVFileLoader()
             Case Else
                 loaderClass = Nothing
         End Select
