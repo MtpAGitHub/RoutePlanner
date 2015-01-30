@@ -16,6 +16,7 @@ Public Class TXTStationBuilder
             Dim name = curLine.Substring(4)
             Dim curStation = New Station(code, name)
             stationList.Add(curStation)
+            curLine = sr.ReadLine
         Loop
         Return stationList
     End Function

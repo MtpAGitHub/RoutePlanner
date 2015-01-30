@@ -28,4 +28,8 @@
         Me._stationCode = codeVal
         Me._stationName = nameVal
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return "Station>> [Code] " & Me._stationCode & " : [Name] " & Me._stationName
+    End Function
 End Class

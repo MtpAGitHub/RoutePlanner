@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RoutePlanner", "RoutePlanner\RoutePlanner.vbproj", "{76292955-55FD-42DC-8723-901383C1C86F}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RoutePlannerTests", "RoutePlannerTests\RoutePlannerTests.vbproj", "{C83A2680-D111-47C2-B957-F8B8E14E4356}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{76292955-55FD-42DC-8723-901383C1C86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76292955-55FD-42DC-8723-901383C1C86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76292955-55FD-42DC-8723-901383C1C86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C83A2680-D111-47C2-B957-F8B8E14E4356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C83A2680-D111-47C2-B957-F8B8E14E4356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C83A2680-D111-47C2-B957-F8B8E14E4356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C83A2680-D111-47C2-B957-F8B8E14E4356}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

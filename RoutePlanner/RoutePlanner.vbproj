@@ -68,7 +68,9 @@
     </ApplicationDefinition>
     <Compile Include="Interfaces\IFileLoader.vb" />
     <Compile Include="Interfaces\IStationListBuilder.vb" />
+    <Compile Include="Model\CSVStationBuilder.vb" />
     <Compile Include="Model\Station.vb" />
+    <Compile Include="Model\StationListFactory.vb" />
     <Compile Include="Model\TXTStationBuilder.vb" />
     <Compile Include="Utils\CSVFileLoader.vb" />
     <Compile Include="Utils\FileExtension.vb" />
