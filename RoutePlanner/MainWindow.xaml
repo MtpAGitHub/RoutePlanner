@@ -14,9 +14,12 @@
     </Window.Resources>
     <Grid>
         <Label x:Name="lblMainTitle" Content="Route Planner" HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="btnLoader" Content="Load Stations" HorizontalAlignment="Left" Margin="85,143,0,0" VerticalAlignment="Top" Width="86"/>
-        <Button x:Name="btnMapBuild" Content="Create Map" HorizontalAlignment="Left" Margin="338,143,0,0" VerticalAlignment="Top" Width="86" Style="{StaticResource isBtnEnabled}"/>
-        <Button x:Name="btnViewStations" Content="View Stations" HorizontalAlignment="Left" Margin="147,262,0,0" VerticalAlignment="Top" Width="207"/>
+        <Button x:Name="btnStationLoader" Content="Load Stations" HorizontalAlignment="Left" Margin="81,92,0,0" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="btnMapBuild" Content="Create Map" HorizontalAlignment="Left" Margin="81,213,0,0" VerticalAlignment="Top" Width="86" Style="{StaticResource isBtnEnabled}"/>
+        <Button x:Name="btnViewStations" Content="View Stations" HorizontalAlignment="Left" Margin="81,153,0,0" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="btnPlotRoute" Content="Plot Route" HorizontalAlignment="Left" Margin="172,265,0,0" VerticalAlignment="Top" Width="167" RenderTransformOrigin="1.147,0.727"/>
+        <Button x:Name="btnViewMap" Content="View Map" HorizontalAlignment="Left" Margin="231,153,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.52,0.682"/>
+        <Button x:Name="btnLoadMap" Content="Load Map" HorizontalAlignment="Left" Margin="231,92,0,0" VerticalAlignment="Top" Width="86"/>
 
     </Grid>
 </Window>

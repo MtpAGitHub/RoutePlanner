@@ -4,12 +4,14 @@
 
     End Sub
 
-    Public Shared Function getInstance(ByVal fileType As String) As IStationListBuilder
+    Public Shared Function getInstance(ByVal fileType As FileType) As IStationListBuilder
         Select Case fileType
-            Case ".txt"
+            Case RoutePlanner.FileType.TXT
                 Return New TXTStationBuilder()
-            Case ".csv"
+            Case RoutePlanner.FileType.CSV
                 Return New CSVStationBuilder()
+            Case RoutePlanner.FileType.XML
+                Return New TXTStationBuilder()
             Case Else
                 Return Nothing
         End Select

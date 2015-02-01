@@ -9,6 +9,16 @@
             _allStations = value
         End Set
     End Property
+    Private _fileData As FileDataBuffer
+    Public Property FileData() As FileDataBuffer
+        Get
+            Return _fileData
+        End Get
+        Set(ByVal value As FileDataBuffer)
+            _fileData = value
+        End Set
+    End Property
+
     Public Property isBtnEnabled = True
 
     Public Sub New()
@@ -17,21 +27,32 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        allStations = New StationInventory()
+        AllStations = New StationInventory()
+        FileData = New FileDataBuffer()
     End Sub
 
     Private Sub btnMapBuild_Click(sender As Object, e As RoutedEventArgs) Handles btnMapBuild.Click
 
     End Sub
 
-    Private Sub btnLoader_Click(sender As Object, e As RoutedEventArgs) Handles btnLoader.Click
-        Dim stationLoader As Loader = New Loader(Me._allStations)
-        stationLoader.Show()
-    End Sub
-
     Private Sub btnViewStations_Click(sender As Object, e As RoutedEventArgs) Handles btnViewStations.Click
-        Dim stationListView = New StationList(Me._allStations.AllStationList)
+        Dim slb = StationListFactory.getInstance(FileData.DataType)
+        Me._allStations.AllStationList = slb.buildStationList(FileData.LoadedData)
+        Dim stationListView = New StationList(AllStations.AllStationList)
         stationListView.Show()
     End Sub
 
+    Private Sub btnViewMap_Click(sender As Object, e As RoutedEventArgs) Handles btnViewMap.Click
+
+    End Sub
+
+    Private Sub btnLoadMap_Click(sender As Object, e As RoutedEventArgs) Handles btnLoadMap.Click
+        Dim fileLoader = New DataFileLoader(Me._fileData)
+        fileLoader.Show()
+    End Sub
+
+    Private Sub btnStationLoader_Click(sender As Object, e As RoutedEventArgs) Handles btnStationLoader.Click
+        Dim fileLoader = New DataFileLoader(Me._fileData)
+        fileLoader.Show()
+    End Sub
 End Class

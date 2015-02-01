@@ -1,6 +1,11 @@
 ﻿Imports System.IO
 Imports System.Text
 
+''' <summary>
+''' Class TxtFileLoader
+''' Is used to load in data from a given path\filename using a StreamReader and returning the data as a String
+''' </summary>
+''' <remarks>This is a remark</remarks>
 Public Class TxtFileLoader
     Implements IFileLoader
 

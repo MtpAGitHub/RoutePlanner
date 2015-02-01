@@ -3,39 +3,42 @@
 Public Class FileLoader
 
     Private fileDialog As OpenFileDialog
-    Private _fileName As String
-    Public Property FileName() As String
+    Private _fileType As FileType
+    Public Property FileType() As FileType
         Get
-            Return _fileName
+            Return _fileType
+        End Get
+        Set(ByVal value As FileType)
+            _fileType = value
+        End Set
+    End Property
+    Private _loadFileType As IFileLoader
+    Public Property LoadFileType() As IFileLoader
+        Get
+            Return _loadFileType
+        End Get
+        Set(ByVal value As IFileLoader)
+            _loadFileType = value
+        End Set
+    End Property
+    Private _fileData As String
+    Public Property FileData() As String
+        Get
+            Return _fileData
         End Get
         Set(ByVal value As String)
-            _fileName = value
+            _fileData = value
         End Set
     End Property
 
-
     Public Sub New()
-        fileDialog = New OpenFileDialog()
-        fileDialog.Title = "File Loader"
-        fileDialog.InitialDirectory = "C:\"
-        fileDialog.Filter = "All files (*.*)|*.*|All files (*.*)|*.*"
-        fileDialog.FilterIndex = 2
-        fileDialog.RestoreDirectory = True
-        If fileDialog.ShowDialog() = True Then
-            Me._fileName = fileDialog.FileName
-        End If
+
     End Sub
 
-    Public Sub New(ByVal dialogTitle As String, ByVal startDir As String, ByVal fileFilter As String, ByVal filterIndex As Integer, ByVal restoreDir As Boolean)
-        fileDialog = New OpenFileDialog()
-        fileDialog.Title = dialogTitle
-        fileDialog.InitialDirectory = startDir
-        fileDialog.Filter = fileFilter
-        fileDialog.FilterIndex = filterIndex
-        fileDialog.RestoreDirectory = restoreDir
-        If fileDialog.ShowDialog() = True Then
-            Me._fileName = fileDialog.FileName
-        End If
+    Public Sub New(loadFile As String)
+        Me._fileType = FileExtension.getExtension(loadFile)
+        Me._loadFileType = FileTypeFactory.getInstance(_fileType)
+        Me._fileData = Me._loadFileType.loadDataFile(loadFile)
     End Sub
 
 End Class

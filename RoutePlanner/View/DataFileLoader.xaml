@@ -1,0 +1,11 @@
+﻿<Window x:Class="DataFileLoader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DataFileLoader" Height="448" Width="648">
+    <Grid>
+        <TextBox x:Name="txtbxFileData" HorizontalAlignment="Left" Height="272" Margin="75,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="502"/>
+        <TextBox x:Name="txtbxStatus" HorizontalAlignment="Left" Height="23" Margin="75,343,0,0" TextWrapping="Wrap" Text="Pending..." VerticalAlignment="Top" Width="502"/>
+        <Button x:Name="btnLoad" Content="File" HorizontalAlignment="Left" Margin="513,386,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
